@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="php_imc.css">
+    <title>Formulário IMC</title>
+    <style> 
+    body {
+        font-family: "Lato", sans-serif;
+        background-image: url(wallpaperflare.com_wallpaper\ \(1\).jpg);
+      }
+      
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff00;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidebar a:hover {
+        color: #bbbbbb;
+      }
+      
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #ffffff00;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
+      
+      .openbtn:hover {
+        background-color: rgba(75, 73, 73, 0.575);
+      }
+      
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+        color: aliceblue;
+        margin-right: 100%;
+      }
+      
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+    </style>
+   
+</head>
+<body>
+    
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="../index.html">Home</a>
+    <a href="phpform/php_imc.html">IMC</a> 
+    <a href="zapzap/forms.html">Whatsapp</a>
+    <a href="Aula 3/index.html">Números</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ </button>  
+  </div>
+  <h2>Atividade Home</h2>
+  <script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+     
+    <form action="php_imc_dados.php" method="POST">
+        <!--Formulário-->
+        <fieldset>
+            <legend><H1>Formulário IMC</H1></legend>
+            <label for="name">Nome:</label>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso"><br>
+            <label for="height">Altura:</label>
+            <input type="text" id="altura" name="altura"><br>
+            <button type="submit" name="enviar">Enviar</button>
+            <button type="reset" name="limpar">Limpar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
