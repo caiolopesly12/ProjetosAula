@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #formulário {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            padding: 2px;
+        }
+        .fs {
+            color: aliceblue;
+           border-color: rgb(15, 141, 191);
+        }
+        
+        .botão {
+            background-color:rgb(15, 141, 191);
+            border: 1px;
+            font-size: larger;
+            color: aliceblue;
+            border-radius: 4px;
+            display: inline-block;
+            transition-duration: 0.4s;
+        }
+
+        .botão:hover {
+         background-color:rgb( 4, 36, 64) ;
+         color: aliceblue;
+        }
+        .botão2 {
+            background-color:rgb(15, 141, 191);
+            border: 1px;
+            font-size: larger;
+            color: aliceblue;
+            border-radius: 4px;
+            display: inline-block;
+    
+        }
+        input {
+            margin: 10px;
+            border: 1px solid rgb(15, 141, 191);
+            background-color: rgb(7, 73, 115);
+            font-size: larger;
+            outline: none;
+
+        }
+    </style>
+</head>
+<body style="background-color: rgb(7, 73, 115);">
+    
+    <fieldset class="fs"> 
+      <legend><H1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Formulário</H1></legend>
+        <div id="formulário"> 
+         <form> 
+        <label for="nome">Nome:</label> 
+        <input type="text" name="nome" id="nome" > <br>
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="sobrenome" name="sobrenome" id="sobrenome" >
+        <br>
+        <label for="email">Definir email:</label>
+        <input type="email" name="email" id="name" >
+        <br>
+        <label for="senha">Definir senha:</label>
+        <input type="password" name:senha >
+        <br>
+        <br>
+        <label for="sexo">Sexo:</label>
+        <br>
+        <input type="radio" name="sexo" id="sexo" value="M" >Masculino
+        <br>
+        <input type="radio" name="sexo" id="sexo" value="F" >Feminino
+        <br>
+        <input type="radio" name="sexo" id="sexo" value="O">Outro
+        <br>
+        <br>
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade" >
+        <br>
+        <br>    
+        <label for="campus">Campus:</label>
+        <select name="campus" id="campus">
+        <option value="">Escolha seu campus</option>
+        <option value="MA">Maracanã</option>
+        <option value="Ni">Niteroi</option>
+        <option value="IT">Itaboraí</option>
+        <option value="SG">São Gonçalo</option>
+        </select>
+        <br>
+        <br>
+        <label for="cusos">Cursos escolhidos:</label>
+        <br>
+        <label for="informática">Informática</label>
+        <input type="checkbox" name="cursos" id="cursos">
+        <br>
+        <label for="administração">Administração</label>
+        <input type="checkbox" name="cursos" id="cursos"> 
+        <br>
+        <br>
+       <button type="submit" class="botão">Enviar</button>
+      <button type="reset"  class="botão 2">Limpar</button>
+    </fieldset>
+    </form>
+</div>
+
+   
+  
+</body>
+</html>
