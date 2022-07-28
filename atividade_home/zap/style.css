@@ -1,0 +1,41 @@
+:root {
+    --fundo: #282a36;
+    --texto: #f8f8f2;
+    --linha: #44475a;
+    --importante: #ff79c6;
+}
+* {
+    font-family: sans-serif;
+    color: var(--texto);
+}
+body, button {
+    background-color: var(--fundo);
+}
+input[type="text"], input[type="number"], textarea {
+    -moz-appearance: textfield;
+    background-color : var(--fundo);
+    border: 1px solid var(--linha);
+    color: var(--texto);
+    margin-bottom: 1em;
+}
+fieldset {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+legend {
+    margin: auto;
+}
+.centro {
+    text-align: center;
+}
+h1, .importante {
+    color: var(--importante);
+    margin-bottom: 0.1em;
+    margin-top: auto;
+}
+ul {
+    list-style-type: square;
+}
+p {
+    font-weight: bold;
+}

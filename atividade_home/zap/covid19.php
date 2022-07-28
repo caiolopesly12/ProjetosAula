@@ -1,76 +1,38 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="zap.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio Zap Zap</title>
 </head>
-<body>  
-    <a href="../index.html"> <input class="voltar" type="button" value="🠔"></a>
+<body>
+    <fieldset class="answer">
+        <?php
+            $op = $_POST['info'];
 
-     <div class="dia"> <p> HOJE</p></div>
-    <fieldset class="conversation">
-    <div class="chat"><p>Ministério da Saúde</p></div>
-    
-    <p><b>Este é o WhatsApp do Ministério da Saúde com dicas e informações <br> sobre a doença pelo Coronavírus (COVID-19).</b></p> 
-    <br>
-    <P>■ Navegue pelas opções selecionando a opção desejada </P> 
-    <br>
-    <p>■ Devido ao volume de mensagens, pode haver demora nas respostas, <br> por favor aguarde.</p>
-    <br>
-    <br>
-    <p><b>O que você gostaria de saber sobre o coronavírus?</b></p>
-    <br>
-    <br>
-    <form action="zap.php" method="POST">
-    <input type="radio"  name="var" value="1"> O Coronavírus
-    <br>
-    <input type="radio"  name="var" value="2">Transmissão
-    <br>
-    <input type="radio" name="var" value="3">Sintomas
-    <br>
-    <input type="radio" name="var" value="4">Prevenção
-    <br>
-    <input type="radio" name="var"  value="5">Diagnóstico
-    <br>
-    <input type="radio" name="var"  value="6">Isolamento domiciliar
-    <br>
-    <input type="radio" name="var"  value="7">Tratamento 
-    <br>
-    <input type="radio" name="var" value="8">Ação no Brasil
-    <br>
-    <input type="radio" name="var"  value="9">Fake ou verdade
-    <br>
-    <input type="radio" name="var"  value="10">Profissão de Saúde
-    <br>
-    <input class="botao" type="submit" value="enviar">
-    <input class="botao" type="reset" value="limpar">
-    </form>
- </fieldset>
-
-<fieldset class="answer">
-    <?php    
-     $var= $_POST['var'];
-  
-    switch ($var){
-       case 1:
-                    echo "<p><b>O que é o coronavírus?</b></p>"; 
-                    echo "
-                    É uma doença causada pelo novo tipo de coronavírus identificado neste ano, que leva o nome <br>de SARS-CoV-2. Ele pertence à família de vírus de mesmo
-                     nome que causainfecções respiratórias.<br>  O vírus tem esse nome porque seu formato, quando observado em microscópio, se assemelha a uma coroa.
-                    ";
-                    break; 
+            switch ($op) {
+                case 1:
+                    echo "<legend><h1>O Coronavírus</h1></legend>";
+                    echo "Os coronavírus são um grupo de vírus de genoma de RNA simples de sentido positivo (serve diretamente para a síntese proteica), conhecidos desde meados dos anos 1960. Pertencem à subfamília taxonómica Orthocoronavirinae da família Coronaviridae, da ordem Nidovirales.<br><br>A maioria das pessoas se infecta com os coronavírus comuns ao longo da vida. Eles são uma causa comum de infecções respiratórias brandas a moderadas de curta duração. Entre os coronavírus encontra-se o vírus causador da forma de pneumonia atípica grave conhecida por SARS, e o vírus causador da COVID-19, responsável pela pandemia em 2020 e 2021.";
+                    break;
                 case 2:
-                    echo " <p><b>Como ocorre a transmissão?</b></p>";
-                    echo "
-                As pessoas infectadas podem transmitir o vírus por meio da tosse, da fala ou mesmo da respiração, quando expelem gotículas maiores que eventualmente <br> se assentam ou aerossóis menores que podem flutuar no ar.
-                Entre os grupos de risco estão qualquer pessoa que cuidou do paciente, incluindo profissionais  <br> de saúde ou familiares, que tenha tido contato físico com o paciente ou que tenha permanecido no mesmo local que o paciente doente.
+                    echo "<legend><h1>Transmissão</h1></legend>";
+                    echo "A transmissão do vírus pode se dar:
+
+                    <ul>
+                        <li>Por meio de tosse ou espirro;</li>
+                        <li>Contato pessoal próximo, como toque ou aperto de mão;</li>
+                        <li>Contato com objetos ou superfícies contaminadas, seguido então de contato com a boca, nariz ou olhos.</li>
+                    </ul>
                 
-                 ";
+                Entre os grupos de risco estão qualquer pessoa que cuidou do paciente, incluindo profissionais de saúde ou familiares, que tenha tido contato físico com o paciente ou que tenha permanecido no mesmo local que o paciente doente.
+                
+                Em 2020, análises indicaram que o SARS-CoV-2 (anteriormente 2019-nCoV) pode ter passado de um animal para o ser humano.";
                 break;
                 case 3:
-                    echo "<p><b>Quais são os sintomas?</b></p>"; 
+                    echo "<legend><h1>Sintomas</h1></legend>";
                     echo "A COVID-19 afeta diferentes pessoas de diferentes maneiras. A maioria das pessoas infectadas apresentará sintomas leves a moderados da doença e não precisarão ser hospitalizadas.
                     Sintomas mais comuns:
                     <ul>
@@ -99,7 +61,7 @@
                     Em média, os sintomas aparecem cinco ou seis dias após a infeção pelo vírus. No entanto, eles também podem levar até 14 dias para se manifestarem.";
                     break;
                 case 4:
-                    echo "<p><b>Como se prevenir?</b></p>";
+                    echo "<legend><h1>Prevenção</h1></legend>";
                     echo "Para evitar a propagação da COVID-19, siga estas orientações.
                     <ul>
                         <li>Mantenha uma distância segura de outras pessoas (pelo menos 1 metro), mesmo que elas não pareçam estar doentes.</li>
@@ -112,7 +74,7 @@
                     </ul>";
                     break;
                 case 5:
-                    echo "<b><p>Qual é o diagnóstico?</b></p>";
+                    echo "<legend><h1>Diagnóstico</h1></legend>";
                     echo "<p class='importante'>Diagnóstico clínico</p>
 
                     <br>
@@ -145,7 +107,7 @@
                         </ul>";
                     break;
                 case 6:
-                    echo "<b><p>Como realizar isolamento domiciliar?</b></p>";
+                    echo "<legend><h1>Isolamento domiciliar</h1></legend>";
                     echo "O isolamento em casa pede cuidados específicos, como a separação de objetos pessoais, limpeza imediata de banheiros após o uso e a separação de indivíduos em cômodos diferentes da casa.<br><br>
 
                     De acordo com a médica infectologista Roberta Schiavon, integrante da Sociedade Brasileira de Infectologia (SBI), a primeira orientação é destinar um quarto e um banheiro para uso exclusivo da pessoa infectada ou com suspeita de infecção. Quando o local não tem mais de um quarto e mais de um banheiro, a recomendação é deixar o quarto para a pessoa suspeita e, quem não apresenta sintomas, deve dormir na sala, por exemplo.<br><br>
@@ -157,7 +119,7 @@
                     ";
                     break;
                 case 7:
-                    echo "<b><p>Qual é o tratamento?</b></p>";
+                    echo "<legend><h1>Tratamento</h1></legend>";
                     echo "Cientistas do mundo todo estão trabalhando para encontrar e desenvolver tratamentos para a COVID-19.
                     <ul>
                         <li>Os tratamentos paliativos mais indicados incluem oxigênio, para casos mais graves e pacientes de alto risco devido a outras doenças, e suportes respiratórios, como ventilação, para pacientes em estado crítico.</li>
@@ -168,11 +130,11 @@
                     A OMS não recomenda a automedicação, incluindo ingestão de antibióticos, como prevenção ou cura da COVID-19.";
                     break;
                 case 8:
-                    echo "<b><p>Ação no Brasil</b></p>"; 
-                    echo "O Governo Federal vem adotando medidas urgentes em função da emergência<br> de saúde pública de importância internacional decorrente do coronavírus.O objetivo é<br> canalizar a atuação dos órgãos e instituções públicas na luta contra a pandemia.";
+                    echo "<legend><h1>Ação no Brasil</h1></legend>";
+                    echo "O Governo Federal vem adotando medidas urgentes em função da emergência de saúde pública de importância internacional decorrente do coronavírus. O objetivo é canalizar a atuação dos órgãos e instituções públicas na luta contra a pandemia.";
                     break;
                 case 9:
-                    echo "<b><p>Real ou Fake </b></p>";
+                    echo "<legend><h1>Real ou Fake</h1></legend>";
                     echo "Conforme declarado pela OMS, o surto de COVID-19 e a resposta a ele têm sido acompanhados por uma
                     enorme infodemia: um excesso de informações, algumas precisas e outras não, que tornam difícil
                     encontrar fontes idôneas e orientações confiáveis quando se precisa.
@@ -188,7 +150,7 @@
                     redes sociais e se alastra mais rapidamente, como um vírus";
                     break;
                 case 10:
-                    echo "<b><p>Profissional de saúde</b></p>";
+                    echo "<legend><h1>Profissional de saúde</h1></legend>";
                     echo "Os profissionais de saúde são particularmente susceptíveis a infecção. No Brasil, bem como em outros países, milhares de profissionais de saúde foram afastados das atividades profissionais por terem adquirido a infecção e muitos morreram em consequência da COVID-19. Na Itália, 20% dos profissionais de saúde que estavam trabalhando na linha de frente do atendimento a COVID-19 tiveram a infecção e muitos morreram.<br><br>
                     
                     Os profissionais de saúde que cuidam de seus pais idosos ou filhos pequenos são diretamente afetados pelo fechamento das escolas e políticas de distanciamento social. Entretanto, sem vacina ou tratamento específico contra o SARS-CoV-2, o isolamento residencial, o distanciamento social e o uso de máscaras de forma universal associado as medidas de higiene podem retardar a transmissão do vírus e diminuir o número de pessoas que procuram os hospitais ao mesmo tempo, adequando o sistema único de saúde a demanda dos casos graves, evitando um colapso de toda rede pública de assistência hospitalar.<br><br>
@@ -197,18 +159,7 @@
                     break;
                 }
         ?>
-    
-
-
-
-
-</fieldset>
-   
-
-
-    
-    
-    
-   
+        <p class="centro"><a href="index.html"><button>Voltar</button></a></p>
+    </fieldset>
 </body>
 </html>

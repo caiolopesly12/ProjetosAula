@@ -7,6 +7,7 @@
     <title>Atividade wpp</title>
 </head>
 <body>
+    <a href="../index.html"> <input class="voltar" type="button" value="🠔"></a>
    <div class="dia"> <p> HOJE</p></div>
     <fieldset class="conversation">
     <div class="chat"><p>Ministério da Saúde</p></div>
@@ -22,7 +23,7 @@
     <br>
     <br>
     
-    <form action="zap.php" method="GET">
+    <form action="zap.php" method="POST">
     <input type="radio"  name="var" value="1"> O Coronavírus
     <br>
     <input type="radio"  name="var" value="2">Transmissão
@@ -43,8 +44,8 @@
     <br>
     <input type="radio" name="var"  value="10">Profissão de Saúde
     <br>
-    <button type="submit" name="enviar">Enviar</button>
-    <button type="reset" name="limpar">Limpar</button>
+    <input class="botao" type="submit" value="enviar">
+    <input class="botao" type="reset"  value="limpar">
     </form>
 
     </fieldset>

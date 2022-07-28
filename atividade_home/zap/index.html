@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio Zap Zap</title>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Covid-19 - Governo Brasileiro</h1></legend>
+        <p class="importante">Este é o site do Ministério da Saúde com dicas e informações sobre a doença pelo Coronavírus (COVID-19)</p>
+        <ul>
+            <li>Navegue pelas opções usando os números e tire suas dúvidas</li>
+            <li>Devido ao volume de mensagens, pode haver demora nas respostas. por favor aguarde.</li>
+        </ul>
+        <p class="importante">O que você gostaria de saber sobre coronavírus?</p>
+        <form action="covid19.php" method="post">
+            <ol>
+                <li><input type="radio" name="info" value="1">O Coronavírus</li>
+                <li><input type="radio" name="info" value="2">Transmissão </li>
+                <li><input type="radio" name="info" value="3">Sintomas </li>
+                <li><input type="radio" name="info" value="4">Prevenção </li>
+                <li><input type="radio" name="info" value="5">Diagnóstico </li>
+                <li><input type="radio" name="info" value="6">Isolamento domiciliar </li>
+                <li><input type="radio" name="info" value="7">Tratamento </li>
+                <li><input type="radio" name="info" value="8">Ação no Brasil </li>
+                <li><input type="radio" name="info" value="9">Fake ou Verdade </li>
+                <li><input type="radio" name="info" value="10">Profissional de saúde </li>
+            </ol>
+            <button type="submit">Enviar</button>
+        </form>
+    </fieldset>
+</body>
+</html>
