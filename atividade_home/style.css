@@ -1,6 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
-  background-image: url(wallpaperflare.com_wallpaper\ \(1\).jpg);
+  background-color: #0D2622;
 }
 
 .sidebar {
@@ -20,9 +20,10 @@ body {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #ffffff;
+  color: #52BF04;
   display: block;
   transition: 0.3s;
+  text-align: center;
 }
 
 .sidebar a:hover {
@@ -35,15 +36,17 @@ body {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  
 }
 
 .openbtn {
   font-size: 20px;
   cursor: pointer;
   background-color: #ffffff00;
-  color: white;
+  color: #52BF04;
   padding: 10px 15px;
   border: none;
+  
 }
 
 .openbtn:hover {
@@ -53,7 +56,7 @@ body {
 #main {
   transition: margin-left .5s;
   padding: 16px;
-  color: aliceblue;
+  color: #52BF04;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

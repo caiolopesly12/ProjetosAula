@@ -1,0 +1,14 @@
+body {
+    background-color:#02AD7D;
+    color:  #8CD1C8;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    text-align: center;
+    
+ }
+ input {
+    border: none;
+    margin: 10px;
+    background-color: #8CD1C8;
+    outline: none;
+}      
