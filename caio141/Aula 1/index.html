@@ -1,0 +1,46 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Atividade 1 DEVWEB2</title>
+</head>
+<body>
+        <fieldset class="form">
+        <legend><h1>Cadastro</h1></legend>
+         <form action="cadastro.php" method="GET">
+    Nome:<input type="text" name="nome">
+        <br>
+    Endereço:<input type="text" name="endereco">
+        <br>
+    Nascimento:<input type="date" name="nascimento">
+        <br>
+    Sexo: <input type="radio" name="sexo" value="M">Masculino
+        <br>
+        <input type="radio" name="sexo" value="F">Feminino
+        <br>
+    Outro<input type="text" name="sexo" value="O"> 
+        <br>
+    Hobby: <input type="checkbox" name="h1" value="praia">Praia
+        <input type="checkbox" name="h2" value="cinema">Cinema
+        <input type="checkbox" name="h3" value="teatro">Teatro
+        <br>
+        <label for="uf">UF</label>
+        <select name="uf">
+        <option value="[">SP</option>
+        <option value="[">RJ</option>
+        <option value="[">MG</option>
+        <option value="[">ES</option>
+        </select>
+        <label for="obs">OBS:</label>
+        <textarea name="obs" cols="35" rows="10">OBS:</textarea>
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="limpar">
+        </form>
+    </fieldset>
+   
+    
+</body>
+</html>

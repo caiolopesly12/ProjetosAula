@@ -1,0 +1,31 @@
+.form {
+    text-align: center;
+    margin-right: 50%;
+    margin-left: 40%;
+
+}
+.form2 {
+    text-align: center;
+    margin-right: 20%;
+    margin-left: 15%;
+}
+body {
+    background-color: #023535;
+    color: #0CABA8;
+    font-size: larger;
+}
+fieldset {
+    border-color: #015958;
+    border-style: double;
+}
+input {
+    background-color: #0CABA8;
+    border: none;
+}
+textarea {
+    background-color: #023535;
+    border-color: #0CABA8;
+    border-style: double;
+    color:#0CABA8;
+  
+}

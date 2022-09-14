@@ -1,0 +1,33 @@
+body {
+    background-color: #c5b8b8;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    
+}
+button {
+border: none;
+margin: 10px;
+background-color: #8CD1C8;
+outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.form {
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-color: #127369;
+    border-style: double;
+    border-radius: 10px;
+    text-align: center;
+    
+}
