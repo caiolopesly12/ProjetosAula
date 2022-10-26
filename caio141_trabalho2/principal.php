@@ -28,7 +28,10 @@
                         <br> 
                         Quantidade: <input type ='number' name ='quantidade'>
                         <br>
-                        <input type='hidden' name='entrada' value='1'>
+                        <button type='submit'>Enviar</button>
+                        <button type='reset'>Limpar</button>
+                        <br>
+                        <input type='hidden' name='entrada' value='2'>
                         <input type='hidden' name='op' value='$op'>
                         <button><a href='inicial.html'>Voltar</a></button>
                     </form>
@@ -43,10 +46,20 @@
                     $for = $_GET['fornecedor'];
                     $quant = $_GET['quantidade'];
                     
-                    $sql = "insert into medicamentos values ('$cod' , '$nom' , '$des' , '$prec' ,'$for', '$quant')";
+                    $sql = "select * from medicamentos where codigo='$cod'";
                     $con = mysqli_connect("localhost", "root", "", "ifarmacia");
-                    $stat = mysqli_query($con, $sql);  
-                    echo "Produto cadastrado!" ;  
+                    $stat = mysqli_query($con, $sql); 
+                    $quantidade = mysqli_num_rows($stat);
+
+                    if ($quantidade > 0) {
+                        echo "Já existe um produto com o mesmo código!";
+                    } else {
+                        $sql = "insert into medicamentos values ('$cod' , '$nom' , '$des' , '$prec' ,'$for', '$quant')";
+                        $con = mysqli_connect("localhost", "root", "", "ifarmacia");
+                        $stat = mysqli_query($con, $sql); 
+                        echo "Produto cadastrado!" ; 
+                    }
+                     
                 }
             break;
             case 2 :
